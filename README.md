@@ -94,5 +94,5 @@ For more examples, see the
 ## Running the project...
 
 1. First download the [dataset](https://drive.google.com/drive/folders/1r-j50zCwobNotqjlHYhGo_Es6vcENJHw?usp=share_link).
-2. Train the model, only if you didn't download the pre-trained version.
+2. Train the model using the Train.py file, only if you didn't download the pre-trained version.
 3. After creating the trained model, run the Classify.py file and input and image for prediction.
