@@ -12,9 +12,8 @@ from keras.optimizers import Adam
 NUM_CLASSES = 3
 IMG_SIZE = 150
 BATCH_SIZE = 32
-EPOCHS = 10
+EPOCHS = 12 #if its moaning try 10
 
-# Define the CNN model
 model = Sequential()
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(IMG_SIZE, IMG_SIZE, 3)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -25,10 +24,8 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(NUM_CLASSES, activation='softmax'))
 
-# Compile the model
 model.compile(optimizer=Adam(lr=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Create an instance of ImageDataGenerator for data preprocessing
 train_datagen = ImageDataGenerator(rescale=1./255)
 train_generator = train_datagen.flow_from_directory(
     'Dataset/train',
@@ -43,7 +40,6 @@ valid_generator = valid_datagen.flow_from_directory(
     batch_size=BATCH_SIZE,
     class_mode='categorical')
 
-# Train the model
 model.fit(
     train_generator,
     steps_per_epoch=train_generator.samples // BATCH_SIZE,
@@ -51,8 +47,7 @@ model.fit(
     validation_steps=valid_generator.samples // BATCH_SIZE,
     epochs=EPOCHS)
 
-# Save the trained model
+
 model.save('surgical_tools_model.h5')
 
-# Display a message box after training is completed
 messagebox.showinfo('Training Completed', 'Model has been trained successfully!')
