@@ -1,5 +1,5 @@
 # Surgical-Tools-Detection-Model
-A simple image classification Model using TensorFlow that classifies surgical tools based on user image input through Tkinter.
+A simple image classification Model using TensorFlow that classifies surgical tools based on user image input through a Tkinter GUI.
 <div align="center">
   <img src="https://www.tensorflow.org/images/tf_logo_horizontal.png">
 </div>
