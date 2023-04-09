@@ -12,7 +12,7 @@ from keras.optimizers import Adam
 NUM_CLASSES = 3
 IMG_SIZE = 150
 BATCH_SIZE = 32
-EPOCHS = 12 #if its moaning try 10
+EPOCHS = 12 #if its crying try 10
 
 model = Sequential()
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(IMG_SIZE, IMG_SIZE, 3)))
