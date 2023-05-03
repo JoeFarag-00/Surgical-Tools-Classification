@@ -91,7 +91,7 @@ b'Hello, TensorFlow!'
 For more examples, see the
 [TensorFlow tutorials](https://www.tensorflow.org/tutorials/).
 
-## Running the project...
+## Running this project...
 
 1. First download the [dataset](https://drive.google.com/drive/folders/1r-j50zCwobNotqjlHYhGo_Es6vcENJHw?usp=share_link), you can choose either the pre-trained model or the actual dataset.
 2. Train the model using the Train.py file, only if you didn't download the pre-trained version.
